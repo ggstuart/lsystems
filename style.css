@@ -133,6 +133,7 @@ canvas {
 	width: 800px;
 	max-width: 100%;
 	border-radius: 50%;
+	box-shadow: 0 0 5px 2px #444;
 }
 .description {
 	justify-self: start;
