@@ -95,11 +95,20 @@ for (const example of examples) {
 	}
 	section.append(system.canvas, div);
 	target.appendChild(section);
+	menu.append(a.cloneNode(true));
 	system.draw();
 }
 
 window.addEventListener('scroll', ev => {
 	totop.classList.toggle('hidden', window.scrollY < 200);
 })
+toggler.addEventListener('click', ev => {
+	menu.classList.toggle('open');
+})
+document.querySelectorAll('#menu a').forEach(a => {
+	a.addEventListener('click', ev => { menu.classList.remove('open') });
+});
+
+
 
 window.examples = examples;
