@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	font-family: "Montserrat";
+	color: #333;
+	background-color: #eee;
+}
+
+h1, h2 {
+	font-family: "Slabo 27px";
+	letter-spacing: 4px;
+}
+h1 {
+	font-size: 3em;
+}
+
+header {
+	padding: 2rem;
+	background-color: black;
+	color: white;
+	overflow: auto;
+	display: grid;
+	align-items: end;
+	box-sizing: border-box;
+}
+
+header p, header h1 {
+	margin: 1rem 0;
+}
+
+h2 {
+	margin-top: 0;
+}
+h2 a {
+	color: inherit;
+}
+p {
+	max-width: 60ch;
+	line-height: 1.5em;
+}
+main {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	/* gap: 1rem; */
+	/* align-items: center; */
+	box-sizing: border-box;
+	width: 100%;
+}
+
+section {
+	display: grid;
+	align-items: center;
+	gap: 2rem;
+	padding: 2rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+section:nth-of-type(odd) {
+	background-color: white;
+}
+section:nth-of-type(even) {
+	background-color: #333;
+	color: #eee;
+}
+
+canvas {
+	background-color: black;
+	width: 800px;
+	max-width: 100%;
+	border-radius: 50%;
+}
+.description {
+	justify-self: start;
+}
+.description p {
+	max-width: 40ch;
+}
+
+.control {
+	display: grid;
+	grid-template-columns: max-content auto;
+	justify-content: end;
+	margin-bottom: 0.25em;
+	border-radius: 2px;
+	font-size: 0.8em;
+	column-gap: 1em;
+}
+
+footer {
+	padding: 2em;
+}
+
+footer a#totop {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	padding: 0.5em 1em;
+	border-radius: 2em;
+	background-color: hsl(0, 0%, 40%);
+	color: white;
+	text-decoration: none;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+footer a#totop:hover {
+	opacity: 1;
+}
+footer a#totop.hidden {
+	opacity: 0;
+	transform: translateX(calc(100% + 2em));
+}
+
+
+@media screen and (min-width: 400px) {
+	.control {
+		font-size: 1em;
+	}
+}
+@media screen and (min-width: 570px) {
+	section {
+		grid-template-columns: max-content 1fr;
+		place-items: end;
+	}
+	canvas {
+		max-width: 40vw;
+	}
+}
+@media screen and (min-width: 800px) {
+	header {
+		grid-template-columns: minmax(max-content, 1fr) 2fr;
+		gap: 1rem;
+	}
+	h1 {
+		font-size: 4em;
+		align-self: end;
+	}
+	main {
+		font-size: 1.2em;
+	}
+}
+@media screen and (min-width: 1150px) {
+	h2 {
+		font-size: 2em;
+	}
+	p {
+		font-size: 1.4em;
+	}
+	header {
+		gap: 2em;
+		padding: 12em 6em;
+	}
+	section {
+		padding: 6em;
+	}
+}
