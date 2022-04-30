@@ -30,6 +30,7 @@ header {
 	box-sizing: border-box;
 }
 
+
 header p, header h1 {
 	margin: 1rem 0;
 }
@@ -228,6 +229,14 @@ footer a#totop.hidden {
 	nav#menu {
 		font-size: 0.8em;
 	}
+	header {
+		background-image: url(tree.png);
+		background-attachment: local;
+		background-size: 200px;
+		background-position: left 3em bottom 6em;
+		background-repeat: no-repeat;
+	}
+
 }
 @media screen and (min-width: 1150px) {
 	h2 {
@@ -246,6 +255,19 @@ footer a#totop.hidden {
 	nav#menu {
 		font-size: 1em;
 		gap: 2em;
+	}
+	header, section {
+		background-image: url(snowflake.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: right;
+	}
+	header {
+		background-image: url(tree.png), url(snowflake.png);
+		background-attachment: local, fixed;
+		background-size: 300px, contain;
+		background-position: left 3em bottom 15em, right;
 	}
 
 }
