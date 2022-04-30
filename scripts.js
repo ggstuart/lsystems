@@ -27,10 +27,10 @@ const examples = [
 	},
 	{
 		"title": "Tree",
-		"obj": new Tree(125, 20, 0.75, 10, true),
+		"obj": new Tree(125, 20, 0.75, 8, true),
 		"description": "The tree is a fractal based on a forking design. Each prong of the fork has a further fork added. This is applied to each prong fractally.",
 		"controls": [
-			{'id': 'generations', 'min': 0, 'max': 14, 'type': 'range'},
+			{'id': 'generations', 'min': 0, 'max': 10, 'type': 'range'},
 			{'id': 'angle', 'min': 0, 'max': 90, 'type': 'range'},
 			{'id': 'length', 'min': 0, 'max': 400, 'type': 'range'},
 			{'id': 'zoom', 'min': 0.25, 'max': 1, 'step': 0.01, 'type': 'range'},
