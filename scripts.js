@@ -47,7 +47,7 @@ function add_control(obj, control) {
 	div.classList.add('control');
 	input.type = control.type;
 	input.id = `${obj.title.toLowerCase().replace(" ", "_")}_${control.id}`;
-	label.for = input.id;
+	label.htmlFor = input.id;
 	switch(input.type) {
 		case "range":
 			input.max = control.max;
@@ -104,9 +104,13 @@ window.addEventListener('scroll', ev => {
 })
 toggler.addEventListener('click', ev => {
 	menu.classList.toggle('open');
+  toggler.setAttribute("aria-pressed", menu.classList.contains("open"));
 })
 document.querySelectorAll('#menu a').forEach(a => {
-	a.addEventListener('click', ev => { menu.classList.remove('open') });
+	a.addEventListener('click', ev => {
+		menu.classList.remove('open')
+		toggler.setAttribute("aria-pressed", menu.classList.contains("open"));
+	});
 });
 
 
